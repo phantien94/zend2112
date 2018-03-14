@@ -1,0 +1,56 @@
+<?php
+$this->headTitle('Contact Form');
+$form = $this->form;
+$form->setAttributes([
+    'action' => $this->url('form',[
+        'controller'=>'contact',
+        'action'=>'index'
+    ]),
+    'method'=>'POST'
+]);
+$fullname = $form->get('fullname');
+$email = $form->get('email');
+$subject = $form->get('subject');
+$message = $form->get('message');
+$btnSubmit = $form->get('btnSubmit');
+$form->prepare();
+?>
+<style>
+.alert-danger{
+    margin-top:10px
+}
+</style>
+<div class="row">
+<div class="col-sm-6 col-sm-offset-4">
+    <?=$this->form()->openTag($form)?>
+    <h2 class="text-center">Contact Form</h2>
+
+    <div class="form-group">
+        <?=$this->formLabel($fullname)?>
+        <?=$this->formElement($fullname)?>
+        <?php
+        echo $this->formElementErrors($fullname, array('class' => 'text-danger'));
+        ?>
+    </div>
+    <div class="form-group">
+        <?=$this->formLabel($email)?>
+        <?=$this->formElement($email)?> 
+        <?php
+        echo $this->formElementErrors($email, array('class' => 'text-danger'));
+        ?>
+    </div>
+    <div class="form-group">
+        <?=$this->formLabel($subject)?>
+        <?=$this->formElement($subject)?>
+    </div>
+    <div class="form-group">
+        <?=$this->formLabel($message)?>
+        <?=$this->formElement($message)?> 
+    </div>
+    <div class="form-group">
+        <?=$this->formRow($btnSubmit)?>
+    </div>
+    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+    <?=$this->form()->closeTag($form)?>
+</div>
+</div>
