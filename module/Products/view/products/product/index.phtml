@@ -46,15 +46,17 @@
                 <td>Edit | Delete</td>
             </tr>
             <?php endforeach?>
-
-            <?= $this->paginationControl(
-                $products,
-                'Sliding',
-                'paginator/index.phtml',
-                ['route' => 'products']
-            ) ?>
+            
         </tbody>
     </table>
+    <div class="row">
+                <?= $this->paginationControl(
+                $products,
+                'Sliding',
+                'paginator/pagination-2.phtml',
+                ['route' => 'products']
+            ) ?>
+    </div>
 
 </body>
 
