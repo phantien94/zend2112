@@ -7,6 +7,8 @@ use Products\Model\ProductsTable;
 use Zend\Paginator\Paginator;
 use Zend\Paginator\Adapter\ArrayAdapter;
 use Products\Form\ProductForm;
+use Zend\Filter\File\Rename;
+use Products\Model\Products;
 
 class ProductController extends AbstractActionController{
 
@@ -46,11 +48,72 @@ class ProductController extends AbstractActionController{
 
 	function addAction(){
 		$form = new ProductForm();
+
+		//Lấy loại cho product
+		$types = $this->table->getAllType();
+		$arrType = [];
+		foreach($types as $type){
+			$arrType[$type['id']] = $type['name'];
+		}
+		// print_r($arrType);
+		// return false;
+		$form->get('id_type')->setValueOptions($arrType); //Dùng setValueOption để gán loại sp cho add.phtml
+
 		$request = $this->getRequest();
 
 		if($request->isGet()){
 			return new ViewModel(['form'=>$form]);
 		}
+
+		//Lưu vào database
+		$data = $request->getPost()->toArray();
+		$file = $request->getFiles()->toArray();
+
+		$data = array_merge($data,$file);
+			
+		$form->setData($data);
+
+		if(!$form->isValid()){
+			return new ViewModel(['form'=>$form]);
+		}
+
+		//Upload file hình
+		$arrImage = [];
+		foreach($data['image'] as $image){
+			$newName = time().'-'.$image['name'];
+			$arrImage[] = $newName;
+			//Doi ten file
+			$rename = new Rename([
+                    'target'=>FILE_PATH.'images/'.$newName,
+                    'overwrite'=>true
+                ]);
+			//Upload file hình
+			$result = $rename->filter($image);
+		}
+
+		$jsonImage = json_encode($arrImage);
+		$data['image'] = $jsonImage;
+
+		//Lưu update date
+		$data['update_at'] = date('Y-m-d',time());
+
+		// idUrl
+		//$url = $this->table->saveUrl(['tien-tien']);
+		///////////////////////////////////////
+		$data['id_url'] = 1;
+
+		$product = new Products;
+		$product->exchangeArray($data);
+		$this->table->saveProduct($product);
+
+		return $this->redirect()->toRoute('products',[
+			'controller'=>'product',
+			'action'=>'index'
+		]);
+		//save
+		// print_r(current($url));
+		// return false;
+		
 	}
 
 	function editAction(){
