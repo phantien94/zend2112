@@ -8,12 +8,13 @@ use Zend\Filter;
 use Zend\Validator\NotEmpty;
 use Zend\Form\Element\Select;
 use Zend\Form\Element\Textarea;
-use  Zend\Validator\Digits;
+use Zend\Validator\Digits;
 use Zend\Form\Element\Checkbox;
 
 
 class ProductForm extends Form{
-
+    public $action;
+    
     function __construct(){
         parent::__construct();
 
@@ -76,7 +77,8 @@ class ProductForm extends Form{
                 ]
             ],
             'attributes'=>[
-                'class'=>'form-control'
+                'class'=>'form-control',
+                'id'=>'detail'
             ]
         ]);
 
@@ -208,16 +210,26 @@ class ProductForm extends Form{
         ]);
 
         //btn
-
-        $this->add([
-            'type'=>'Submit',
-            'name'=>'btnSubmit',
-            'attributes'=>[
-                'class'=>'btn btn-primary',
-                'value'=>'Add'
-            ]
-        ]);
-
+        if($this->action =='add'){
+            $this->add([
+                'type'=>'Submit',
+                'name'=>'btnSubmit',
+                'attributes'=>[
+                    'class'=>'btn btn-primary',
+                    'value'=>'Add'
+                ]
+            ]);
+        }
+        else{
+            $this->add([
+                'type'=>'Submit',
+                'name'=>'btnSubmit',
+                'attributes'=>[
+                    'class'=>'btn btn-primary',
+                    'value'=>'Update'
+                ]
+            ]);
+        }
         $this->filterForm();
     }
 

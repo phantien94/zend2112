@@ -37,5 +37,7 @@ if (file_exists(__DIR__ . '/../config/development.config.php')) {
 }
 
 define('FILE_PATH',__DIR__.'/img/');
+
+require 'helper/functions.php';
 // Run the application!
 Application::init($appConfig)->run();
