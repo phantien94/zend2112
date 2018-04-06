@@ -1,0 +1,115 @@
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4 my-message">
+            <?= $this->flashMessenger()->render('success',['alert','alert-success']);?>
+            <?= $this->flashMessenger()->render('warning',['alert','alert-warning']);?>
+        </div>
+    </div>
+    <h2>
+        <div style="float:l,eft;width:80%">List of Users</div>
+        <div style="float:right;width:20%;text-align:right">
+        <a href="<?=$this->url('user',[
+            'controller'=>'user',
+            'action'=>'add'
+        ])?>">Add</a>
+        </div>
+    </h2>
+
+    <table class="table table-hover">
+        <thead>
+            <th>STT</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Birthdate</th>
+            <th>Options</th>
+        </thead>
+        <tbody>
+            <?php 
+            $stt = 1;
+            foreach($this->users as $user):
+            ?>
+
+            <tr id="user-<?=$user->getId()?>">
+                <td><?=$stt++?></td>
+                <td><?=$user->getFullname()?></td>
+                <td><?=$user->getEmail()?></td>
+               
+                <td>
+                    <a  href="<?=$this->url('user',[
+                        'controller'=>'user',
+                        'action'=>'edit',
+                        'id'=>$user->getId()
+                    ])?>">Edit</a> 
+                    | 
+                    <a class="delete-user" data-id="<?=$user->getId()?>" data-name="<?=$user->getFullname()?>"> Delete</a>
+                    |
+                    <a  href="<?=$this->url('user',[
+                    'controller'=>'user',
+                    'action'=>'changePassword',
+                    'id'=>$user->getId()
+                ])?>">Change Password</a>
+                </td>
+            </tr>
+            <?php endforeach?>
+            
+        </tbody>
+    </table>
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-sm">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+    
+      <div class="modal-body">
+        <p>Bạn có chắc chắn xoá user <b class="name-user">....</b> </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" id="btnOk">OK</button>
+        <button type="button" class="btn btn-default" id="btnCancel" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.delete-user').click(function(){
+        $('.modal-body').html('<p>Bạn có chắc chắn xoá user <b class="name-user">....</b> </p>')
+        $('#btnOk').show()
+        $('#btnCancel').html('Cancel')
+        var id = $(this).attr('data-id')
+        var name = $(this).attr('data-name')
+        $('.name-user').html(name)
+        $('#myModal').modal('show')
+
+        $('#btnOk').click(function(){
+            var url = "<?=$this->url('user',[
+                    'controller'=>'user',
+                    'action' => 'delete',
+                    'id' => 'id'
+                ])?>"
+            url = url.replace('id',id)
+            //console.log(url)
+            $.ajax({
+                url:url,
+                type:"GET",
+                success:function(res){
+                    if(res.result =='success'){
+                        $('.modal-body').html('Xoá thành công')
+                        $('#user-'+id).hide()
+                    }
+                    else{
+                        $('.modal-body').html('Xoá không thành công')
+                    }
+                    $('#btnOk').hide()
+                    $('#btnCancel').html('OK')
+                }
+            })
+        })
+
+    })
+})
+</script>

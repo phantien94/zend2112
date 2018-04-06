@@ -14,7 +14,7 @@
 return [
     'db' => [
         'driver' => 'Pdo',
-        'dsn'    => 'mysql:dbname=furniture_2;host=localhost;charset=utf8',
+        'dsn'    => 'mysql:dbname=zend2112;host=localhost;charset=utf8',
         'username' => 'root',
         'password' => ''
     ],
@@ -28,30 +28,11 @@ return [
                     'port'     => '3306',
                     'user'     => 'root',
                     'password' => '',
-                    'dbname'   => 'furniture_2',
+                    'dbname'   => 'zend2112',
+                    'charset'  => 'utf8',
+                    'default_timezone'=> 'Asia/Ho_Chi_Minh'
                 ],
             ],
         ],
-        // 'driver' => [
-        //     // defines an annotation driver with one path, and names it `my_annotation_driver`
-        //     'my_annotation_driver' => [
-        //         'class' => \Doctrine\ORM\Mapping\Driver\AnnotationDriver::class,
-        //         'cache' => 'array',
-        //         'paths' => [
-        //             __NAMESPACE__ . '/Entity'
-        //         ],
-        //     ],
-
-        //     // default metadata driver, aggregates all other drivers into a single one.
-        //     // Override `orm_default` only if you know what you're doing
-        //     'orm_default' => [
-        //         'drivers' => [
-        //             // register `my_annotation_driver` for any entity under namespace `User`
-        //             'User' => 'my_annotation_driver',
-        //         ],
-        //     ],
-        // ],
     ],
-
-
 ];
