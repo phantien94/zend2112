@@ -30,6 +30,10 @@ return [
     'Application',
     'Started',
     'Form',
+<<<<<<< HEAD
+=======
+    // 'Database',
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
     'Products',
     'User'
 ];

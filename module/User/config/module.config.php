@@ -1,11 +1,16 @@
 <?php
+
 namespace User;
+
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
 //use Zend\ServiceManager\Factory\InvokableFactory;
 use User\Controller\Factory\UserControllerFactory;
+<<<<<<< HEAD
 use Zend\Authentication\AuthenticationService;
 use User\Controller\Factory\AuthControllerFactory;
+=======
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
 return [
     'router' => [
         'routes' => [
@@ -60,6 +65,7 @@ return [
                     ]
                 ],
             ],
+<<<<<<< HEAD
             'login' => [
                 'type'    => Literal::class,
                 'options' => [
@@ -80,6 +86,9 @@ return [
                     ]
                 ],
             ],
+=======
+            
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
         ],
     ],
     'controllers' => [
@@ -121,6 +130,7 @@ return [
             ],
         ],
     ],
+<<<<<<< HEAD
     'service_manager'=>[
         'factories'=>[
             Service\UserManager::class => Service\Factory\UserManagerFactory::class,
@@ -171,3 +181,12 @@ return [
         ]
     ]
 ];
+=======
+
+    'service_manager'=>[
+        'factories'=>[
+            Service\UserManager::class => Service\Factory\UserManagerFactory::class
+        ]
+    ],
+];
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8

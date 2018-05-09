@@ -47,7 +47,10 @@ class ResetPasswordForm extends Form{
                 'placeholder'=>"Nhập mật khẩu mới"
             ]
         ]);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
         //confirm_password
         $this->add([
             'type'=>'Password',
@@ -63,7 +66,10 @@ class ResetPasswordForm extends Form{
                 'placeholder'=>"Nhập lại mật khẩu mới"
             ]
         ]);
+<<<<<<< HEAD
         
+=======
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
         //btn
         $this->add([
             'type'=>'Submit',

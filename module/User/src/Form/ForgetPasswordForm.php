@@ -28,7 +28,10 @@ class ForgetPasswordForm extends Form{
                 'placeholder'=>"Nhập email tạo tài khoản"
             ]
         ]);
+<<<<<<< HEAD
         
+=======
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
         //btn
         $this->add([
             'type'=>'Submit',
@@ -41,7 +44,10 @@ class ForgetPasswordForm extends Form{
         $this->filterForm();
 
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
     function filterForm(){
         $filter = new InputFilter();
         $this->setInputFilter($filter);

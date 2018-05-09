@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "e95dd948ae21dfe6d3eefb63742007f4",
+=======
+    "content-hash": "1f10787d1f71ddf244f79c62ae1ac959",
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -576,6 +580,7 @@
         },
         {
             "name": "doctrine/inflector",
+<<<<<<< HEAD
             "version": "v1.3.0",
             "source": {
                 "type": "git",
@@ -590,6 +595,22 @@
             },
             "require": {
                 "php": "^7.1"
+=======
+            "version": "v1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/inflector.git",
+                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/e11d84c6e018beedd929cff5220969a3c6d1d462",
+                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
             },
             "require-dev": {
                 "phpunit/phpunit": "^6.2"
@@ -597,7 +618,11 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
+<<<<<<< HEAD
                     "dev-master": "1.3.x-dev"
+=======
+                    "dev-master": "1.2.x-dev"
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
                 }
             },
             "autoload": {
@@ -639,7 +664,11 @@
                 "singularize",
                 "string"
             ],
+<<<<<<< HEAD
             "time": "2018-01-09T20:05:19+00:00"
+=======
+            "time": "2017-07-22T12:18:28+00:00"
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
         },
         {
             "name": "doctrine/instantiator",
@@ -1046,6 +1075,7 @@
         },
         {
             "name": "symfony/debug",
+<<<<<<< HEAD
             "version": "v4.0.8",
             "source": {
                 "type": "git",
@@ -1056,6 +1086,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/debug/zipball/5961d02d48828671f5d8a7805e06579d692f6ede",
                 "reference": "5961d02d48828671f5d8a7805e06579d692f6ede",
+=======
+            "version": "v3.4.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/debug.git",
+                "reference": "9cf7c2271cfb89ef9727db1b740ca77be57bf9d7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/debug/zipball/9cf7c2271cfb89ef9727db1b740ca77be57bf9d7",
+                "reference": "9cf7c2271cfb89ef9727db1b740ca77be57bf9d7",
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
                 "shasum": ""
             },
             "require": {
@@ -1098,7 +1140,11 @@
             ],
             "description": "Symfony Debug Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
             "time": "2018-04-03T05:24:00+00:00"
+=======
+            "time": "2018-04-03T05:22:50+00:00"
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -2292,6 +2338,7 @@
         },
         {
             "name": "zendframework/zend-mail",
+<<<<<<< HEAD
             "version": "2.9.0",
             "source": {
                 "type": "git",
@@ -2302,15 +2349,35 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/zendframework/zend-mail/zipball/067248425f285dec0bdb74256a8f67f9092f115e",
                 "reference": "067248425f285dec0bdb74256a8f67f9092f115e",
+=======
+            "version": "2.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/zend-mail.git",
+                "reference": "248230940ab1453b2a532a8fde76c5a6470d7aad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zend-mail/zipball/248230940ab1453b2a532a8fde76c5a6470d7aad",
+                "reference": "248230940ab1453b2a532a8fde76c5a6470d7aad",
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
                 "shasum": ""
             },
             "require": {
                 "ext-iconv": "*",
+<<<<<<< HEAD
                 "php": "^7.1",
                 "zendframework/zend-loader": "^2.5",
                 "zendframework/zend-mime": "^2.5",
                 "zendframework/zend-stdlib": "^2.7 || ^3.0",
                 "zendframework/zend-validator": "^2.10.2"
+=======
+                "php": "^7.0 || ^5.6",
+                "zendframework/zend-loader": "^2.5",
+                "zendframework/zend-mime": "^2.5",
+                "zendframework/zend-stdlib": "^2.7 || ^3.0",
+                "zendframework/zend-validator": "^2.6"
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
             },
             "require-dev": {
                 "phpunit/phpunit": "^6.0.8 || ^5.7.15",
@@ -2350,7 +2417,11 @@
                 "mail",
                 "zf2"
             ],
+<<<<<<< HEAD
             "time": "2018-03-01T18:57:00+00:00"
+=======
+            "time": "2017-06-08T20:03:58+00:00"
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
         },
         {
             "name": "zendframework/zend-math",

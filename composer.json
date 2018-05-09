@@ -35,8 +35,12 @@
         "zendframework/zend-servicemanager": "^3.3",
         "zendframework/zend-crypt": "^3.2",
         "zendframework/zend-json": "^3.1",
+<<<<<<< HEAD
         "zendframework/zend-mail": "^2.9",
         "zendframework/zend-authentication": "^2.5"
+=======
+        "zendframework/zend-mail": "^2.8"
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
     },
     "autoload": {
         "psr-4": {

@@ -1,9 +1,12 @@
 <?php
 namespace User;
+<<<<<<< HEAD
 use Zend\Mvc\MvcEvent;
 use User\Service\AuthManager;
 use Zend\Mvc\Controller\AbstractActionController;
 use User\Controller\AuthController;
+=======
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
 
 class Module
 {
@@ -20,6 +23,7 @@ class Module
                 ]
             ]
         ];
+<<<<<<< HEAD
     }
 
     public function onBootstrap(MvcEvent $event){
@@ -40,6 +44,9 @@ class Module
         }
     }
 ///
+=======
+    }
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
 }
 
 

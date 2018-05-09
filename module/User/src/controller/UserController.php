@@ -14,14 +14,21 @@ class UserController extends AbstractActionController{
 
     private $entityManager;
     private $userManager ;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
     function __construct($entityManager, $userManager ){
         $this->entityManager = $entityManager;
         $this->userManager = $userManager;
     }
     
     function indexAction(){
+<<<<<<< HEAD
     
+=======
+        
+>>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
         //$users = $this->entityManager->find(User::class, 10);
         //$users = $this->entityManager->getRepository(User::class)->find(10);
 
