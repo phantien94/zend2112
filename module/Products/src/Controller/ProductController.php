@@ -20,7 +20,7 @@ class ProductController extends AbstractActionController{
 	}
 
 	function testDBAction(){
-		// echo $this->table->testConnect();
+		echo $this->table->testConnect();
 		$result = $this->table->getAllProducts();
 
 		foreach ($result as $product) {

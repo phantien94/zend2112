@@ -22,7 +22,7 @@
         </div>
     </div>
     <h2>
-        <div style="float:l,eft;width:80%">List of products</div>
+        <div style="float:left;width:80%">List of products</div>
         <div style="float:right;width:20%;text-align:right">
         <a href="<?=$this->url('products',[
             'controller'=>'product',
@@ -58,7 +58,7 @@
                 <?php
                     $images = json_decode($p->image);
                     foreach($images as $img):?>
-                    <img src='img/images/<?=$img?>' height="80px">
+                    <img src='http://localhost:8080/zend2112/public/img/images/<?=$img?>' height="80px">
                 <?php endforeach ?>
                 </td>
                 <td>

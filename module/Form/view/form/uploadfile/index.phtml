@@ -6,10 +6,8 @@
 
 	$form->setAttributes([
 		'enctype'=>'multipart/form-data',
-		'action'=>$this->url('form',[
-			'controller'=>'upload-file',
-			'action'=>'index'
-		])
+		'action'=>'#'
+		
 	]);
 ?>
 <style>
@@ -22,7 +20,7 @@
 			<div class="form-group">
 				<?= $this->formLabel($file)?>
 				<?= $this->formElement($file)?>
-				<?= $this->formElementErrors($file,['class'=>'text-danger'])?>
+				<?= $this->formElementErrors($file)?>
 			</div>
 			<div class="form-group">
 				<?= $this->formRow($button)?>

@@ -37,7 +37,7 @@ return [
             ],
         ],
     ],
-<<<<<<< HEAD
+
     'session_config' => [
         'cookie_lifetime' => 3600,//1h
         'gc_maxlifetime'  => 2*3600
@@ -51,6 +51,4 @@ return [
     'session_storage'=>[
         'type' => SessionArrayStorage::class
     ]
-=======
->>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
 ];
