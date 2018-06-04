@@ -19,11 +19,12 @@ return [
                 'options' => [
                     'route'    => '[/:controller][/:action][/:page]',
                     'defaults' => [
-                        
+                        // 'controller'=>Controller\NewsController::class,
+                        // 'action'    =>'add',
                     ],
                     'constraints'=>[
                         'page'=>'[0-9]+'
-                    ],
+                    ]
                     
                 ],
             ],
@@ -42,7 +43,7 @@ return [
     ],
    'view_manager' => [
         'template_path_stack' => [
-            'news'=>__DIR__ . '/../view',
+            __DIR__ . '/../view',
         ],
     ],
 ];

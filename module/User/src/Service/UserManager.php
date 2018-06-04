@@ -17,10 +17,7 @@ class UserManager {
         date_default_timezone_set('Asia/Ho_Chi_Minh');
         $this->entityManager = $entityManager;
     }
-<<<<<<< HEAD
-    
-=======
->>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
+
     function insertUser($data = []){
         $user = new User;
         $user->setEmail($data['email']);
@@ -107,10 +104,7 @@ class UserManager {
         //update token for user
         $token = Rand::getString(40,"0987654321wertyuioplkgfdsazxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM");
         $user->setToken($token);
-<<<<<<< HEAD
-=======
-        //31l4Fpf6v0fOYys2l2T1cxUxJan0KlNReerBkCc2
->>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
+
 
         $tokenDate = new \DateTime(date('Y-m-d H:i:s'));
         $tokenDate->format('Y-m-d H:i:s');

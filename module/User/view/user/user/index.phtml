@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+
  <div class="row">
-=======
+
     <div class="row">
->>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
         <div class="col-sm-4 col-sm-offset-4 my-message">
             <?= $this->flashMessenger()->render('success',['alert','alert-success']);?>
             <?= $this->flashMessenger()->render('warning',['alert','alert-warning']);?>
@@ -36,11 +35,9 @@
                 <td><?=$stt++?></td>
                 <td><?=$user->getFullname()?></td>
                 <td><?=$user->getEmail()?></td>
-<<<<<<< HEAD
+
                 <td><?=$user->getBirthdate()->format('d-m-Y')?></td>
-=======
-               
->>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
+
                 <td>
                     <a  href="<?=$this->url('user',[
                         'controller'=>'user',
@@ -92,10 +89,7 @@ $(document).ready(function(){
         var name = $(this).attr('data-name')
         $('.name-user').html(name)
         $('#myModal').modal('show')
-<<<<<<< HEAD
-=======
 
->>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
         $('#btnOk').click(function(){
             var url = "<?=$this->url('user',[
                     'controller'=>'user',
@@ -120,10 +114,7 @@ $(document).ready(function(){
                 }
             })
         })
-<<<<<<< HEAD
-=======
 
->>>>>>> 334e638e58ab5cc581b010dd85d4024ac9dc56f8
     })
 })
 </script>

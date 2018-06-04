@@ -136,46 +136,46 @@ return [
             AuthenticationService::class => Service\Factory\AuthenticationServiceFactory::class
         ]
     ],
-    'access_filter'=>[
-        'controllers'=>[
-            'user'=>[
-                //liệt kê các action được phép truy cập khi chưa login
-                [
-                    'actions'=>[
-                        'forgetPassword',
-                        'setPassword'
-                    ],
-                    'allow'=> 'all'
-                ],
-                //liệt kê các action yêu cầu login
-                [
-                    'actions'=>[
-                        'index',
-                        'delete',
-                        'edit',
-                        'add',
-                        'changePassword'
-                    ],
-                    'allow'=> 'limit'
-                ]
-            ],
-            'auth'=>[
-                //liệt kê các action được phép truy cập khi chưa login
-                [
-                    'actions'=>[
-                        'login'
-                    ],
-                    'allow'=> 'all'
-                ],
-                //liệt kê các action yêu cầu login
-                [
-                    'actions'=>[
-                        'logout'
-                    ],
-                    'allow'=> 'limit'
-                ]
-            ]
-        ]
-    ]
+    // 'access_filter'=>[
+    //     'controllers'=>[
+    //         'user'=>[
+    //             //liệt kê các action được phép truy cập khi chưa login
+    //             [
+    //                 'actions'=>[
+    //                     'forgetPassword',
+    //                     'setPassword'
+    //                 ],
+    //                 'allow'=> 'all'
+    //             ],
+    //             //liệt kê các action yêu cầu login
+    //             [
+    //                 'actions'=>[
+    //                     'index',
+    //                     'delete',
+    //                     'edit',
+    //                     'add',
+    //                     'changePassword'
+    //                 ],
+    //                 'allow'=> 'limit'
+    //             ]
+    //         ],
+    //         'auth'=>[
+    //             //liệt kê các action được phép truy cập khi chưa login
+    //             [
+    //                 'actions'=>[
+    //                     'login'
+    //                 ],
+    //                 'allow'=> 'all'
+    //             ],
+    //             //liệt kê các action yêu cầu login
+    //             [
+    //                 'actions'=>[
+    //                     'logout'
+    //                 ],
+    //                 'allow'=> 'limit'
+    //             ]
+    //         ]
+    //     ]
+    // ]
 ];
 
